@@ -1,0 +1,17 @@
+1st Assignment: Mean Ratings
+sort (colMeans(A1,na.rm = TRUE))
+
+2nd Assignment: Maximum Ratings 
+sort (20-colSums(is.na(A1)))
+3rd Assignment: Maximum Positive rating fraction 
+sort(colSums(A1>=4,na.rm = TRUE)/(20 - colSums(is.na(A1))))
+
+4th Assignment: Most related movie with starwars 
+# Original Data Frame A1.
+
+# Create temp data frame
+Atemp <- A1
+
+Atemp[is.na(Atemp)] <- 0
+Atemp[Atemp > 0] <- 1
+sort(colSums(Atemp$X260..Star.Wars..Episode.IV...A.New.Hope..1977. & Atemp))
